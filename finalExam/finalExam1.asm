@@ -31,5 +31,10 @@
     GetChar:
 
         # poll for receiver ready
+		pollingLoopBegin:
+			# chekc bit
+			beqz	$v0, tpollingLoopBegin
+		sw			$a0, 0xffff000c
+
+		jr			$ra    
         
-        jr  $ra

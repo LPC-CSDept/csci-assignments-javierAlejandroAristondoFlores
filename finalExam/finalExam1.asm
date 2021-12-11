@@ -1,4 +1,4 @@
-# program to take 3 character digits 
+# program to take 3 character digits and transform
 
 .data
 
@@ -21,7 +21,7 @@
         # make chars digits and sum
         move    $a0, $t0
         li      $v0, 1
-        syscall
+        syscall         
         # print digits
 
     li  $v0, 10
@@ -30,4 +30,6 @@
 
     GetChar:
 
+        # poll for receiver ready
+        
         jr  $ra

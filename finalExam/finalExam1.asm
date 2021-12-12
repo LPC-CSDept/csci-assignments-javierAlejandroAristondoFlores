@@ -7,16 +7,16 @@
     main:
         # take in chars sequentially and save
         jal     GetChar
-        move    $t0, $v0
+        addi	$t0, $v0, -48
         jal     GetChar
-        move    $t1, $v0
+        addi	$t1, $v0, -48   
         jal     GetChar
-        move    $t2, $v0
+        addi	$t2, $v0, -48
         li      $t3, 10
         mul    $t1, $t1, $t3
-        add     $t0, $t0, $t1
+        add     $t2, $t2, $t1
         mul    $t3, $t3, $t3
-        mul    $t2, $t2, $t3
+        mul    $t0, $t0, $t3
         add     $t0, $t0, $t2 
         # make chars digits and sum
         move    $a0, $t0

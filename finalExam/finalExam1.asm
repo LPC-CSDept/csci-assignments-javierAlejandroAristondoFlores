@@ -26,11 +26,9 @@
     li  $v0, 10
     syscall
     GetChar:
-        # poll for receiver ready
-		pollingLoopBegin:
-            lw		$v0, 0xffff0000
-		    andi	$v0, $v0, 1
-			beqz    $v0, tpollingLoopBegin
-        lw			$v0, 0xffff000c
-		jr			$ra    
+        lw		$v0, 0xffff0000
+        andi	$v0, $v0, 1
+        beqz    $v0, GetChar
+        lw		$v0, 0xffff000c
+		jr		$ra    
         

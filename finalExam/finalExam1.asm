@@ -23,18 +23,14 @@
         li      $v0, 1
         syscall         
         # print digits
-
     li  $v0, 10
     syscall
-
-
     GetChar:
-
         # poll for receiver ready
 		pollingLoopBegin:
-			# chekc bit
-			beqz	$v0, tpollingLoopBegin
-		sw			$a0, 0xffff000c
-
+            lw		$v0, 0xffff0000
+		    andi	$v0, $v0, 1
+			beqz    $v0, tpollingLoopBegin
+        lw			$v0, 0xffff000c
 		jr			$ra    
         

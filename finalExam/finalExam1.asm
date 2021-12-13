@@ -1,7 +1,3 @@
-# program to take 3 character digits and transform
-
-.data
-
 .text
 .globl main
     main:

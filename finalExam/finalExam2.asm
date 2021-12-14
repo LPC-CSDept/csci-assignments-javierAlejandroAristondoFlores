@@ -1,9 +1,8 @@
-.data
-
 .text
 .globl main
-
     main:
+        # enable interrupts 
 
-    li  $v0, 10
-    syscall
+        # infiniloop
+
+    .ktext

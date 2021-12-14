@@ -9,8 +9,16 @@
         li		$t0, 0xff01
         mtc0	$t0, $12 
 
-        # infiniloopa
+        # infiniloop
         here: j here
 
     .ktext
-        
+        # read data
+
+        # check if key is q
+
+        # yes
+
+        # no
+
+

@@ -14,11 +14,15 @@
 
     .ktext
         # read data
+        lw      $k0, 0xffff0004
 
-        # check if key is q
+        # check if input was q
+        bneq    $k0, 'q', notEqual
 
         # yes
+        li      
 
         # no
+        notEqual:
 
 

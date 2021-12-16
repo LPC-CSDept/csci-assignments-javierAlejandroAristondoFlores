@@ -15,5 +15,11 @@
         # infiniloop
         here: j here
 
-    .ktext
+    .ktext 0x80000180
+        # check if exception was an interrupt
         
+        # check if q
+
+        # yes
+
+        # no

@@ -20,13 +20,13 @@
     bnez	$k0, end
     # check if q
     lw		$a0, 0xffff0004
-	beq		$a0, 'q', quit
-    # yes
-    li		$v0, 11
-	syscall
+	bneq		$a0, 'q', quit
     # no
     quit:
     li      $v0, 10
     syscall
+    # yes
+    li		$v0, 11
+	syscall
     end:
     eret

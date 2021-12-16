@@ -20,7 +20,7 @@
     bnez	$k0, end
     # check if q
     lw		$a0, 0xffff0004
-	bneq		$a0, 'q', quit
+	bne		$a0, 'q', quit
     # no
     quit:
     li      $v0, 10

@@ -1,6 +1,3 @@
-.data
-    KERNEL_TEMP_BUFFER:  .space  8
-
 .text
 .globl main
     main:

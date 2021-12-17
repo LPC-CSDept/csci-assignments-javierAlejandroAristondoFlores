@@ -25,6 +25,6 @@
         lw		$v0, 0xffff0000         # v0_return = receiverStatus
         andi	$v0, $v0, 1             # v0_return &= 1
         beqz    $v0, GetChar            # if(!v0_return) goto GetChar
-        lw		$v0, 0xffff000c         # v0_return = receiverData
+        lw		$v0, 0xffff0004         # v0_return = receiverData
 		jr		$ra    
         

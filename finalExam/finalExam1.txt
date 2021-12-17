@@ -1,0 +1,1 @@
+The first part of the final was straightforward. I called my subroutine GetChar 3 times subsequently to save each digit of the number. Then I just do the math of multiplying the digit against its place value and adding it into the last place register used. I did not want to loop because that would require RAM access and that gets tedious.
